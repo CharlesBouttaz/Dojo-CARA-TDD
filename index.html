@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Dojo CARA - TDD</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="components/normalize-css/normalize.css"/>
+    <link rel="stylesheet" href="components/font-awesome/build/assets/font-awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="components/highlightjs/styles/tomorrow.css"/>
+    <link rel="stylesheet" href="css/ruban.min.css"/>
+    <link rel="stylesheet" href="css/ruban-print.min.css" media="print"/>
+    <style>
+        section {
+            border-left: 1em solid #434343;
+            border-right: 1em solid #434343;
+        }
+
+        .pagination {
+            right: 2.6em;
+        }
+
+        pre code {
+            background-color: inherit;
+        }
+
+        pre .xml .javascript {
+            opacity: 1;
+        }
+
+        ul .items {
+            list-style: circle;
+        }
+
+        li {
+            padding-left: 1em;
+            font-size: 30px;
+            padding-bottom: 10px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        .strike {
+            text-decoration: line-through;
+            padding-left: 70px;
+        }
+
+        .subSection {
+            padding-left: 70px;
+        }
+
+        .img-centered {
+            width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+    </style>
+</head>
+
+<body>
+<section id="ruban">
+    <h1>Coding Dojo</h1>
+    <h2>Le code piloté par les tests: TDD pas à pas</h2>
+    <h3>CARA Lyon - INSA - @CharlesBouttaz</h3>
+</section>
+<section id="evenements">
+    <h1>A venir dans vos communautés</h1>
+    <ul class="steps">
+        <li>Agenda des communautés: <a href="http://www.lyontechhub.org/#!/calendrier">www.lyontechhub.org</a></li>
+        <li class="subSection">20/01 [Lyon JUG] WebComponents et Polymer</li>
+        <li class="subSection">23/01 [MUG Lyon] ?</li>
+        <li class="subSection">24/01 [AFUP] Soirée Provisioning</li>
+        <li class="subSection">19/02 [CARA Dojo] Atelier Fruit shop</li>
+        <li>Coding dojo : <a href="https://groups.google.com/forum/#!forum/cara-dojo">Google Group</a></li>
+    </ul>
+</section>
+<section id="sondage">
+    <h1>Sondage</h1>
+    <ul class="steps">
+        <li>Qui vient au dojo pour la première fois ?</li>
+        <li>Qui a entendu parler de TDD ?</li>
+        <li>Qui pratique ?</li>
+        <li>Tous les jours ?</li>
+        <li>Quel language ? (java, c#, js...)</li>
+    </ul>
+</section>
+<section id="introDojo">
+    <h1>Coding Dojo ?</h1>
+    <ul class="steps">
+        <li>C'est quoi ?</li>
+        <li class="subSection">Lieu d'apprentissage</li>
+        <li>Pour quoi faire ?</li>
+        <li class="strike">Compétition</li>
+        <li class="subSection">S'améliorer en developpement</li>
+        <li>Terrain d'entrainement</li>
+        <li class="strike">Pression, deadline, production</li>
+        <li class="subSection">Tester des choses nouvelles, droit à l'erreur</li>
+    </ul>
+</section>
+<section id="comment">
+    <!--<h1>Méthode</h1>-->
+    <ul class="steps">
+        <li style="color:red">1. Ecrire un test</li>
+        <li class="subSection">Test first: Qu'est ce que je dois faire ?</li>
+        <li class="subSection">Choisir le test le plus simple pour commencer</li>
+
+        <li style="color:red">2. Lancer les tests et vérifier que le test est KO</li>
+        <li class="subSection">On vérifie son harnais de sécurité</li>
+        <li class="subSection">Sinon le test a un problème ou la feature existe déja</li>
+
+        <li style="color:red">3. Ecrire le code qui fait passer les tests</li>
+        <li class="subSection">Le code le plus simple, le plus rapide à écrire</li>
+        <li class="subSection">Ce n'est pas grave si c'est du code <strong>"sale"</strong></li>
+
+        <li style="color:green">4. Lancer les tests</li>
+        <li class="subSection">Tant que les tests ne sont pas vert, on retourne en 3</li>
+
+        <li style="color:green">5. Refactor & Nettoyage</li>
+        <li class="subSection">Eliminer la <strong>duplication</strong>, déplacer le code a l'endroit approprié, renommer, faire émerger les concepts, les patterns, etc.</li>
+
+        <li>6. Répéter</li>
+        <li class="subSection">Tests OK : GOTO 1</li>
+        <!--Pas de débug pendant 15 min: on cherche le flow-->
+    </ul>
+</section>
+<section id="avantages">
+    <h1>Bénéfices</h1>
+    <ul class="steps">
+        <li>Test automatisés pour garantir la non régression</li>
+        <li>Test first: meilleure testabilité</li>
+        <li>Documentation exécutable</li>
+        <li>Moins de temps perdu à débugger</li>
+        <li>Design: on ne fait que ce qui est nécessaire (pragmatisme)</li><!--pas de big upfront design-->
+        <li>Agréable : flow, feedback loop rapide, confiance pour la non régression</li>
+    </ul>
+</section>
+<section id="TDD2">
+    <h1>Test Driven Development</h1>
+    <ul class="steps">
+        <li><img class="img-centered" src="components/img/Red_Green_Refactor.png"/></li>
+    </ul>
+</section>
+<section id="Planning">
+    <h1>Planning</h1>
+    <ul>
+        <li>Kata #1 (30 min.)</li>
+        <li>Rétro. (5 min.)</li>
+        <li>Suite du Kata #1 ou Kata #2 (45 min.)</li>
+        <li>Rétro. & Conclusion (15 min.)</li>
+    </ul>
+</section>
+<section id="exercice">
+    <h1>Exercice 1</h1>
+    <p>
+        Le musée gallo-romain veut ajouter des bornes interactives
+        pour que les visiteurs découvrent comment comptaient les romains.
+    </p>
+    <p>
+        Vous devez écrire un algo qui convertit un entier en chiffre romain.
+    </p>
+</section>
+<section id="exerciceSuite">
+    <h1>Chiffres romains</h1>
+    <img src="images/Chiffres%20romains.jpg" width="60%">
+</section>
+<section id="tips">
+    <h1>Tips</h1>
+    <ul class="steps">
+        <li>(1) Un test ne valide qu'une <em>chose</em> à la fois (Setup, execution, validation)</li>
+        <li>(3) Je dois voir du code sale !</li>
+        <li>(3) Tant que les tests ne sont pas vert on a pas le droit de toucher au code de test</li>
+        <li>(R) Le code de prod est aussi important que le code de test (on le refactor aussi)</li>
+        <li>(R) Soignez le nomage: dire ce qu'on fait et faire ce qu'on dit</li>
+        <li>(R) Tests KO > 5min: on revient à l'état initial (ne pas rester bloqué ou commencer à débugger)</li>
+        <li>le but est de faire beacoup de cycles très courts</li>
+        <!--<li>First make it work, then make it right, then make it small and fast.</li>-->
+    </ul>
+</section>
+<section id="guidelines">
+    <h1>Guidelines</h1>
+    <ul>
+        <li>Quel est le prochain test le plus simple ? (+valeur)</li><!-- qui apporte de la valeur-->
+        <li>Quel est l'implémentation la plus simple ?</li>
+        <li>Est ce que j'ai éliminé tout ce qui ressemblait de près ou de loin à de la duplication ?</li>
+    </ul>
+</section>
+<section id="retroExo">
+    <h1>Retro de l'exercice</h1>
+    <ul class="steps">
+        <li>Tour de table: difficultés, ressenti </li>
+        <li>Solutions mises en place ?</li>
+        <li>Pair programming ?</li>
+    </ul>
+</section>
+<section id="exercice2">
+    <h1>Exercice 2</h1>
+    <p>
+        Le musée voudrait que les visiteurs se rendent compte de la difficulté de calculer
+        en chiffres romains.
+    </p>
+    <p>
+        Ecrire un algo qui additionne 2 chiffres romains.
+    </p>
+</section>
+<section id="retroDojo">
+    <h1>Retrospective du dojo</h1>
+    <ul class="steps">
+        <li>Qu'est ce qui était bien ?</li>
+        <li>Qu'est ce qui pourrait être amélioré ?</li>
+        <li>Idées ?</li>
+        <li>ROTI</li>
+    </ul>
+</section>
+<section id="references">
+    <h1>Références</h1>
+    <a href="http://www.amazon.fr/Test-Driven-Development-By-Example/dp/0321146530"><img width="20%"
+            src="images/Test%20Driven%20Developement%20-%20Kent%20Beck.jpg"/></a>
+    <a href="http://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"><img width="20%"
+            src="images/Clean%20Code.jpg"/></a>
+    <a href="http://www.amazon.fr/Refactoring-Improving-Design-Existing-Code/dp/0201485672"><img width="20%"
+            src="images/Refactoring%20Martin%20Fowler.jpg"/></a>
+</section>
+
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/keymaster/keymaster.min.js"></script>
+<script src="components/hammerjs/dist/hammer.min.js"></script>
+<script src="components/highlightjs/highlight.pack.js"></script>
+<script src="js/ruban.min.js"></script>
+<script>
+    var ruban = new Ruban({
+        pagination: true
+    });
+</script>
+</body>
+</html>
