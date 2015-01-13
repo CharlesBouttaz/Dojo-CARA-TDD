@@ -62,7 +62,9 @@
 <body>
 <section id="ruban">
     <h1>Coding Dojo</h1>
+    <p></p>
     <h2>Le code piloté par les tests: TDD pas à pas</h2>
+    <p></p>
     <h3>CARA Lyon - INSA - @CharlesBouttaz</h3>
 </section>
 <section id="evenements">
@@ -99,29 +101,31 @@
         <li class="subSection">Tester des choses nouvelles, droit à l'erreur</li>
     </ul>
 </section>
+<section id="introDojo">
+    <h1>Test Driven Developpement</h1>
+</section>
 <section id="comment">
     <!--<h1>Méthode</h1>-->
     <ul class="steps">
         <li style="color:red">1. Ecrire un test</li>
         <li class="subSection">Test first: Qu'est ce que je dois faire ?</li>
-        <li class="subSection">Choisir le test le plus simple pour commencer</li>
+        <!--<li class="subSection">Choisir le test le plus simple pour commencer</li>-->
 
         <li style="color:red">2. Lancer les tests et vérifier que le test est KO</li>
         <li class="subSection">On vérifie son harnais de sécurité</li>
-        <li class="subSection">Sinon le test a un problème ou la feature existe déja</li>
+        <!--<li class="subSection">Sinon le test a un problème ou la feature existe déja</li>-->
+        <!--<li class="subSection">Ne compile pas = KO</li>-->
 
-        <li style="color:red">3. Ecrire le code qui fait passer les tests</li>
-        <li class="subSection">Le code le plus simple, le plus rapide à écrire</li>
+        <li style="color:red">3. Ecrire le code <strong>le plus simple</strong> qui fait passer les tests</li>
         <li class="subSection">Ce n'est pas grave si c'est du code <strong>"sale"</strong></li>
 
         <li style="color:green">4. Lancer les tests</li>
-        <li class="subSection">Tant que les tests ne sont pas vert, on retourne en 3</li>
+        <!--<li class="subSection">Tant que les tests ne sont pas verts, on retourne en 3</li>-->
 
         <li style="color:green">5. Refactor & Nettoyage</li>
-        <li class="subSection">Eliminer la <strong>duplication</strong>, déplacer le code a l'endroit approprié, renommer, faire émerger les concepts, les patterns, etc.</li>
+        <li class="subSection"><strong>duplication</strong>, renommage, déplacer le code au bon endroit, faire émerger les concepts, les patterns, etc.</li>
 
-        <li>6. Répéter</li>
-        <li class="subSection">Tests OK : GOTO 1</li>
+        <li>Répéter</li>
         <!--Pas de débug pendant 15 min: on cherche le flow-->
     </ul>
 </section>
@@ -139,7 +143,7 @@
 <section id="Planning">
     <h1>Planning</h1>
     <ul>
-        <li>Kata #1 (30 min.)</li>
+        <li>Kata #1 (45 min.)</li>
         <li>Rétro. (5 min.)</li>
         <li>Suite du Kata #1 ou Kata #2 (45 min.)</li>
         <li>Rétro. & Conclusion (15 min.)</li>
@@ -168,14 +172,18 @@
         <li>(5) Le code de prod est aussi important que le code de test (on le refactor aussi)</li>
         <li>(5) Soignez le nomage: dire ce qu'on fait et faire ce qu'on dit</li>
         <li>(5) Tests KO > 5min: on revient à l'état initial (ne pas rester bloqué ou commencer à débugger)</li>
-        <li>le but est de faire beacoup de cycles très courts</li>
+        <li>le but est de faire beaucoup de cycles très courts</li>
         <!--<li>First make it work, then make it right, then make it small and fast.</li>-->
     </ul>
+</section>
+<section id="exerciceRappel">
+    <h1>Chiffres romains</h1>
+    <img src="images/Chiffres%20romains.jpg" width="60%">
 </section>
 <section id="guidelines">
     <h1>Guidelines</h1>
     <ul>
-        <li>Quel est le prochain test le plus simple ? (+valeur)</li><!-- qui apporte de la valeur-->
+        <li>Quel est le prochain test le plus simple ? (avec de la valeur)</li><!-- qui apporte de la valeur-->
         <li>Quel est l'implémentation la plus simple ?</li>
         <li>Est ce que j'ai éliminé tout ce qui ressemblait de près ou de loin à de la duplication ?</li>
     </ul>
@@ -183,7 +191,7 @@
 <section id="retroExo">
     <h1>Retro de l'exercice</h1>
     <ul class="steps">
-        <li>Tour de table: difficultés, ressenti </li>
+        <li>Tour de table: difficultés, ressenti</li>
         <li>Solutions mises en place ?</li>
         <li>Pair programming ?</li>
     </ul>
@@ -213,12 +221,15 @@
         <li>Slides : <a href="https://github.com/cbouttaz/Dojo-CARA-TDD">github.com/cbouttaz/Dojo-CARA-TDD</a> </li>
         <li>Intéressé pour un Brown Bag Lunch : Twitter @CharlesBouttaz</li>
         <li>Références</li>
-        <a href="http://www.amazon.fr/Test-Driven-Development-By-Example/dp/0321146530"><img width="20%"
-                                                                                             src="images/Test%20Driven%20Developement%20-%20Kent%20Beck.jpg"/></a>
-        <a href="http://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882"><img width="20%"
-                                                                                                     src="images/Clean%20Code.jpg"/></a>
-        <a href="http://www.amazon.fr/Refactoring-Improving-Design-Existing-Code/dp/0201485672"><img width="20%"
-                                                                                                     src="images/Refactoring%20Martin%20Fowler.jpg"/></a>
+        <a href="http://www.amazon.fr/Test-Driven-Development-By-Example/dp/0321146530">
+            <img width="20%" src="images/Test%20Driven%20Developement%20-%20Kent%20Beck.jpg"/>
+        </a>
+        <a href="http://www.amazon.fr/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">
+            <img width="20%" src="images/Clean%20Code.jpg"/>
+        </a>
+        <a href="http://www.amazon.fr/Refactoring-Improving-Design-Existing-Code/dp/0201485672">
+            <img width="20%" src="images/Refactoring%20Martin%20Fowler.jpg"/>
+        </a>
     </ul>
 <section/>
 
